@@ -9,7 +9,7 @@ con = sqlite3.connect("prey.db", check_same_thread=False)
 cursor = con.cursor()
 print("success")
 
-@app.route("/api/v1", methods=["GET"])
+@app.route("/api/v1/", methods=["GET"])
 def return_home():
     return jsonify({
         "hostiles": "http:/localhost:3001/api/hostiles/",
